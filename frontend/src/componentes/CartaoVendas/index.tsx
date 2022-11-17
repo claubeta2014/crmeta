@@ -1,31 +1,39 @@
-import BtNotificacao from "../BtNotificacao"
-import "./styles.css"
-import DatePicker from "react-datepicker"
-import "react-datepicker/dist/react-datepicker.css"
+import BtNotificacao from "../BtNotificacao";
+import "./styles.css";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { useState } from "react";
 
 function CartaoVendas() {
+
+    const min = new Date(new Date().setDate(new Date().getDate() - 365));
+    const max = new Date();
+
+    const [minDate, setMinDate] = useState(min);
+    const [maxDate, setMaxDate] = useState(max);
+
+
     return (
         <div className="crmeta-card">
             <h2 className="crmeta-sales-title">Vendas</h2>
             <div>
                 <div className="crmeta-form-control-container">
                     <DatePicker
-                        selected={new Date()}
-                        onChange={(date: Date) => { }}
+                        selected={minDate}
+                        onChange={(date: Date) => setMinDate(date)}
                         className="crmeta-form-control"
                         dateFormat="dd/MM/yyyy"
                     />
                 </div>
                 <div className="crmeta-form-control-container">
                     <DatePicker
-                        selected={new Date()}
-                        onChange={(date: Date) => { }}
+                        selected={maxDate}
+                        onChange={(date: Date) => setMaxDate(date)}
                         className="crmeta-form-control"
                         dateFormat="dd/MM/yyyy"
                     />
                 </div>
             </div>
-
             <div>
                 <table className="crmeta-sales-table">
                     <thead>
@@ -89,4 +97,4 @@ function CartaoVendas() {
     )
 }
 
-export default CartaoVendas
+export default CartaoVendas;

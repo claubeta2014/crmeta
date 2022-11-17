@@ -1,5 +1,5 @@
-import icone from '../../assets/img/iconNotificacao.svg'
-import './styles.css'
+import icone from '../../assets/img/iconNotificacao.svg';
+import './styles.css';
 
 
 function BtNotificacao() {
@@ -10,4 +10,4 @@ function BtNotificacao() {
     )
 }
 
-export default BtNotificacao
+export default BtNotificacao;

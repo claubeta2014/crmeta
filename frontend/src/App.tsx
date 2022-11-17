@@ -1,5 +1,5 @@
-import Header from "./componentes/Header"
-import CartaoVendas from "./componentes/CartaoVendas"
+import Header from "./componentes/Header";
+import CartaoVendas from "./componentes/CartaoVendas";
 
 function App() {
   return (
@@ -17,4 +17,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
