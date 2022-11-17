@@ -18,7 +18,7 @@ public class VendaController {
 	private VendaService service;
 	
 	@GetMapping
-	public List<Venda> findSales(){
+	public List<Venda> findVendas(){
 		return service.findVendas();
 		
 	}
