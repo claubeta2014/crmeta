@@ -1,15 +1,20 @@
-import BtNotificacao from "./componentes/BtNotificacao"
+import Header from "./componentes/Header"
+import CartaoVendas from "./componentes/CartaoVendas"
 
 function App() {
   return (
     <>
-    <h1>Olá terráqueos!</h1>
-    <BtNotificacao/>
-    <BtNotificacao/>
-    <BtNotificacao/>
-    <BtNotificacao/>
+      <Header />
+      <main>
+        <section id="vendas">
+          <div className="crmeta-container">
+            <CartaoVendas />
+
+          </div>
+        </section>
+      </main>
     </>
-    )
+  )
 }
 
 export default App

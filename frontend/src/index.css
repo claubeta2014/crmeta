@@ -19,3 +19,13 @@ a:visited {
   color: unset;
   text-decoration: none;
 }
+
+.crmeta-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#vendas {
+  padding: 40px 10px;
+}
