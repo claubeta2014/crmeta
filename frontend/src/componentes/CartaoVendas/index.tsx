@@ -2,7 +2,8 @@ import BtNotificacao from "../BtNotificacao";
 import "./styles.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function CartaoVendas() {
 
@@ -12,7 +13,11 @@ function CartaoVendas() {
     const [minDate, setMinDate] = useState(min);
     const [maxDate, setMaxDate] = useState(max);
 
-
+    useEffect(() => {axios.get("http://localhost:8080/vendas")
+    .then(response =>{
+        console.log(response.data);
+    });
+}, []);
     return (
         <div className="crmeta-card">
             <h2 className="crmeta-sales-title">Vendas</h2>
