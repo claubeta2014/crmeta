@@ -15,14 +15,19 @@ function CartaoVendas() {
     const [minDate, setMinDate] = useState(min);
     const [maxDate, setMaxDate] = useState(max);
 
-    const [venda, setVendas] = useState<Venda[]>([]);
+    const [vendas, setVendas] = useState<Venda[]>([]);
 
     useEffect(() => {
-        axios.get(`${BASE_URL}/vendas`)
+
+        const dataMin = minDate.toISOString().slice(0,10);
+        const dataMax = maxDate.toISOString().slice(0,10);
+        console.log(dataMin);
+
+        axios.get(`${BASE_URL}/vendas?minDate=${dataMin}&maxDate=${dataMax}`)
         .then(response => {
             setVendas(response.data.content);
         });
-    }, []);
+    }, [minDate, maxDate]);
     return (
         <div className="crmeta-card">
             <h2 className="crmeta-sales-title">Vendas</h2>
@@ -59,7 +64,7 @@ function CartaoVendas() {
                     </thead>
                     <tbody>
                         {
-                            venda.map(venda => {
+                            vendas.map(venda => {
                                 return (
                                     <tr key={venda.id}>
                                         <td className="show992">{venda.id}</td>
