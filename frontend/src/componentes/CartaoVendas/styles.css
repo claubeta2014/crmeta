@@ -9,6 +9,10 @@
     color: #676fff;
     font-size: 24px;
     margin-bottom: 20px;
+    text-align: center;
+}
+.crmeta-sales-subtitle{
+    color: #676fff;
 }
 
 .crmeta-form-control-container {
@@ -36,7 +40,7 @@
 .crmeta-sales-table thead {
     height: 55px;
     font-size: 16px;
-    color: #e9e9e9;
+    color:#676fff;
     font-weight: 700;
 }
 

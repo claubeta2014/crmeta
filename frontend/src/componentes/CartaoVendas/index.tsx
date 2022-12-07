@@ -19,17 +19,18 @@ function CartaoVendas() {
 
     useEffect(() => {
 
-        const dataMin = minDate.toISOString().slice(0,10);
-        const dataMax = maxDate.toISOString().slice(0,10);
+        const dataMin = minDate.toISOString().slice(0, 10);
+        const dataMax = maxDate.toISOString().slice(0, 10);
 
         axios.get(`${BASE_URL}/vendas?minDate=${dataMin}&maxDate=${dataMax}`)
-        .then(response => {
-            setVendas(response.data.content);
-        });
+            .then(response => {
+                setVendas(response.data.content);
+            });
     }, [minDate, maxDate]);
     return (
         <div className="crmeta-card">
-            <h2 className="crmeta-sales-title">Vendas</h2>
+            <h2 className="crmeta-sales-title" >Tabela de Vendas</h2>
+            <h4 className="crmeta-sales-subtitle">Data Inicial</h4>
             <div>
                 <div className="crmeta-form-control-container">
                     <DatePicker
@@ -39,6 +40,7 @@ function CartaoVendas() {
                         dateFormat="dd/MM/yyyy"
                     />
                 </div>
+                <h4 className="crmeta-sales-subtitle">Data Final</h4>
                 <div className="crmeta-form-control-container">
                     <DatePicker
                         selected={maxDate}
