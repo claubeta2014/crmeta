@@ -6,10 +6,10 @@ function Header() {
         <header>
             <div className="crmeta-logo-container">
                 <img src={face} alt="CRMeta" />
-                <h1>C.RobertaMetas</h1>
+                <h1>Roberta-Metas</h1>
                 <p>
                     Desenvolvido por
-                    <a href="https://www.instagram.com/robertabeta02/">@robertabeta02</a>
+                    <a href="https://www.instagram.com/robertabeta02/"> @robertabeta02</a>
                 </p>
             </div>
         </header>
